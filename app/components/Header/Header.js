@@ -10,7 +10,7 @@ const logStuff = () => {
 const Header = () => {
   return (
     <div className="Header">
-      <h1>Header</h1>
+      <h1>Elijah J. Williams</h1>
       <Button handleClick={() => logStuff()} />
     </div>
   );
