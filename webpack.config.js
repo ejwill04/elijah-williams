@@ -11,10 +11,27 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
       },
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /\.scss$/, loader: 'style!css!sass' },
+      {
+        test: /\.scss$/,
+        loaders: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.svg/,
+          loader: [
+            'svg-url-loader',
+          ],
+      },
     ]
   },
+  // sassLoader: {
+  //   includedPaths: [
+  //     path.join(__dirname, 'node_modules/normalize-scss/sass'),
+  //   ],
+  // },
   devServer: {
     contentBase: './build',
     inline: true
