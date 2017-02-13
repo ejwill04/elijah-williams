@@ -7,12 +7,12 @@ const Header = (props) => {
     <div className="Header">
       <h1>Elijah J. Williams</h1>
       <button
-        className='about-btn btn'
+        className='about-btn nav-btn'
         onClick={ () => {props.displayBody('About')}}
         >about
       </button>
       <button
-        className='projects-btn btn'
+        className='projects-btn nav-btn'
         onClick={ () => {props.displayBody('Projects')}}
         >projects
       </button>

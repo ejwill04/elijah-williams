@@ -12,3 +12,41 @@ h1 {
   font-family: 'Megrim', 'Railway', sans-serif;
   font-size: 52px;
 }
+
+.contact-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary1;
+}
+
+.media-link {
+  height: 40px;
+  margin: 5px;
+}
+
+footer {
+  margin: 5px;
+  text-align: center;
+}
+
+.project-snapshot {
+  width: 300px;
+  height: 200px;
+}
+
+.about-me-section {
+  font-size: 16px;
+}
+
+.nav-btn {
+  border: 0;
+  background-color: $primary2;
+  font-size: 20px;
+  font-weight: bolder;
+
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default () => {
   return (
-    <div>
+    <div className='about-me-section'>
       <p>Hi! I'm a software developer based in Denver, Colorado. I'm currently learning all I can about front-end development at Turing School of Software & Design in Downtown Denver.</p>
 
       <p>Prior to my transition into making sweet code, I spent five years helping other companies accomplish their goals through financing and strategic advice giving. While I loved hob-nobbing with powdered wigs and building righteous spreadsheets, I was drawn to the creativity and complexity of the JavaScript community.</p>

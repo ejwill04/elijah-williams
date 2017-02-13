@@ -7,23 +7,26 @@ const Contact = () => {
   return (
     <section id="contact">
       <h2>contact</h2>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/elijahwilliams">
-            <img src={linkedin} />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/ejwill04" target="_blank">
-          <img src={github} />
-          </a>
-        </li>
-        <li>
-          <a href="mailto:ejwill04@gmail.com" target="_blank">
-            <img src={email} />
-          </a>
-        </li>
-      </ul>
+      <div className='contact-btn-wrapper'>
+        <a
+          href="https://www.linkedin.com/in/elijahwilliams">
+          <img
+            className="media-link"
+            src={linkedin} />
+        </a>
+        <a
+          href="https://github.com/ejwill04" target="_blank">
+          <img
+            className="media-link"
+            src={github} />
+        </a>
+        <a
+          href="mailto:ejwill04@gmail.com" target="_blank">
+          <img
+            className="media-link"
+            src={email} />
+        </a>
+      </div>
     </section>
   );
 }
