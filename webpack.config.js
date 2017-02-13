@@ -19,19 +19,18 @@ module.exports = {
           'sass-loader',
         ],
       },
+      { test: /\.(png|jpg)$/,
+         loader: "url-loader?limit=5000"
+      },
       {
         test: /\.svg/,
-          loader: [
-            'svg-url-loader',
-          ],
-      },
+        use: [
+          loader: 'svg-url-loader',
+          options: {}
+        ]
+      }
     ]
   },
-  // sassLoader: {
-  //   includedPaths: [
-  //     path.join(__dirname, 'node_modules/normalize-scss/sass'),
-  //   ],
-  // },
   devServer: {
     contentBase: './build',
     inline: true

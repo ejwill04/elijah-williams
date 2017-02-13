@@ -2,10 +2,20 @@ import React from 'react';
 
 import Button from '../Button';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="Header">
       <h1>Elijah J. Williams</h1>
+      <button
+        className='about-btn btn'
+        onClick={ () => {props.displayBody('About')}}
+        >about
+      </button>
+      <button
+        className='projects-btn btn'
+        onClick={ () => {props.displayBody('Projects')}}
+        >projects
+      </button>
     </div>
   );
 }

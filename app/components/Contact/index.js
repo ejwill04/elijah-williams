@@ -1,5 +1,7 @@
 import React from 'react';
-// const email = require('../../assets/images/email.svg')
+import linkedin from '../../assets/images/linkedin.png';
+import github from '../../assets/images/github.png';
+import email from '../../assets/images/email.png';
 
 const Contact = () => {
   return (
@@ -7,23 +9,18 @@ const Contact = () => {
       <h2>contact</h2>
       <ul>
         <li>
-          <a href="mailto:ejwill04@gmail.com">
-            {/* <img src="../../assets/images/email.svg" alt="Email link"/> */}
+          <a href="https://www.linkedin.com/in/elijahwilliams">
+            <img src={linkedin} />
           </a>
         </li>
         <li>
           <a href="https://github.com/ejwill04" target="_blank">
-            {/* <img src="../../assets/images/github.svg" alt="GitHub link"/> */}
+          <img src={github} />
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/ejwill04" target="_blank">
-            {/* <img src="../../assets/images/t.svg" alt="Twitter link"/> */}
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/elijahwilliams" target="_blank">
-            {/* <img src="../../assets/images/linkedin.svg" alt="LinkedIn link"/> */}
+          <a href="mailto:ejwill04@gmail.com" target="_blank">
+            <img src={email} />
           </a>
         </li>
       </ul>
