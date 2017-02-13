@@ -22,13 +22,6 @@ module.exports = {
       { test: /\.(png|jpg)$/,
          loader: "url-loader?limit=5000"
       },
-      {
-        test: /\.svg/,
-        use: [
-          loader: 'svg-url-loader',
-          options: {}
-        ]
-      }
     ]
   },
   devServer: {
