@@ -9,19 +9,22 @@ const Contact = () => {
       <h2>contact</h2>
       <div className='contact-btn-wrapper'>
         <a
-          href="https://www.linkedin.com/in/elijahwilliams">
+          href="https://www.linkedin.com/in/elijahwilliams"
+          target="_blank">
           <img
             className="media-link"
             src={linkedin} />
         </a>
         <a
-          href="https://github.com/ejwill04" target="_blank">
+          href="https://github.com/ejwill04"
+          target="_blank">
           <img
             className="media-link"
             src={github} />
         </a>
         <a
-          href="mailto:ejwill04@gmail.com" target="_blank">
+          href="mailto:ejwill04@gmail.com"
+          target="_blank">
           <img
             className="media-link"
             src={email} />
