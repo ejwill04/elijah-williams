@@ -10,6 +10,7 @@ body {
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -18,8 +19,8 @@ body {
 }
 
 .nav-btn-wrapper {
-  margin: 40px 0;
   flex-basis: 20%;
+  margin: 40px 0;
 }
 
 h1 {
