@@ -15,7 +15,7 @@ body {
 }
 
 .header-title {
-  margin: auto 0;
+  margin: auto 60px;
 }
 
 .nav-btn-wrapper {
@@ -71,6 +71,8 @@ footer {
   padding: 10px;
   outline: .5px solid $secondary1;
   text-align: center;
+  box-shadow: 5px 5px 5px $secondary1;
+  // transition: .1s ease-in-out;
 
   &:hover {
     transform: scale(1.01);
