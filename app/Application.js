@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header'
+import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
@@ -23,6 +24,7 @@ export default class Application extends React.Component {
         <Header
           displayBody={this.displayBody.bind(this)}
         />
+        {this.state.sectionDisplayed !== 'Projects' ? <Hero /> : null}
         {this.state.sectionDisplayed === 'Projects' ? <Projects /> : <About />}
         <Contact />
         <Footer />

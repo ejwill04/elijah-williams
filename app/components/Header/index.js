@@ -1,5 +1,5 @@
 import React from 'react';
-import headshot from '../../assets/images/headshot.jpg';
+// import headshot from '../../assets/images/headshot.jpg';
 
 import Button from '../Button';
 
@@ -19,10 +19,9 @@ const Header = (props) => {
           >projects
         </button>
       </div>
-      {/* <img src={headshot} className='hero-image' /> */}
-      <section className='hero-image-placeholder'></section>
     </div>
   );
 }
+{/* <section className='hero-image-placeholder'></section> */}
 
 export default Header;

@@ -6,7 +6,7 @@ import email from '../../assets/images/email.png';
 const Contact = () => {
   return (
     <section id="contact">
-      <h2>contact</h2>
+      <h2 className='section-title'>contact</h2>
       <div className='contact-btn-wrapper'>
         <a
           href="https://www.linkedin.com/in/elijahwilliams"
