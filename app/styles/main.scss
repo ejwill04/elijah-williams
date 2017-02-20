@@ -105,6 +105,15 @@ footer {
   font-size: 16px;
 }
 
+.resume-link {
+  text-align: center;
+
+  &:active,
+  &:visited {
+    color: $primary1;
+  }
+}
+
 .section-title {
   margin: 20px auto;
   font-size: 20px;

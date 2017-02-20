@@ -13,16 +13,16 @@ const Projects = () => {
       <h2 className='section-title'>projects</h2>
       <div className='project-info-wrapper'>
 
-      <a className='project-link'
-        target='_blank'
-        href='https://github.com/ejwill04/frogger'>
-        <div className='project'>
-          <h3 className='project-name'>Frogger</h3>
-          <img
-            className='project-snapshot'
-            src={frogger} />
-          <p className='project-description'>What: The classic arcade game frogger</p>
-          <p className='project-description'>How: JavaScript, Canvas</p>
+        <a className='project-link'
+          target='_blank'
+          href='https://github.com/ejwill04/frogger'>
+          <div className='project'>
+            <h3 className='project-name'>Frogger</h3>
+            <img
+              className='project-snapshot'
+              src={frogger} />
+            <p className='project-description'>What: The classic arcade game frogger</p>
+            <p className='project-description'>How: JavaScript, Canvas</p>
         </div>
       </a>
 
@@ -34,7 +34,7 @@ const Projects = () => {
           <img
             className='project-snapshot'
             src={filmfavs} />
-            <p className='project-description'>What: Favorite new and popular movies</p>
+            <p className='project-description'>What: Favorite new and popular movies using MovieDB API</p>
             <p className='project-description'>How: JavaScript, React, React Router, Redux, SCSS</p>
         </div>
       </a>
