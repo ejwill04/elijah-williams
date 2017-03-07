@@ -21779,6 +21779,18 @@
 	      'p',
 	      null,
 	      'This realization found me teaching myself to code and eventually in the midst of the passionate developers at Turing. I\'ll graduate from the program in April 2017 ready to find an awesome team that values true relationships, elegant code, and beautiful designs.'
+	    ),
+	    _react2.default.createElement(
+	      'a',
+	      {
+	        className: 'resume-link',
+	        href: 'https://resume.creddle.io/resume/99l23ocs1pg',
+	        target: '_blank' },
+	      _react2.default.createElement(
+	        'h3',
+	        null,
+	        'check out my resume here'
+	      )
 	    )
 	  );
 	};
@@ -21858,12 +21870,22 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'What: The classic arcade game frogger'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' The classic arcade game frogger'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'How: JavaScript, Canvas'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript, Canvas'
 	          )
 	        )
 	      ),
@@ -21886,12 +21908,22 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'What: Favorite new and popular movies'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' Favorite new and popular movies using MovieDB API'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'How: JavaScript, React, React Router, Redux, SCSS'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript, React, React Router, Redux, SCSS'
 	          )
 	        )
 	      ),
@@ -21914,12 +21946,22 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'What: Messaging app'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' Messaging app'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'How: JavaScript, React, OAuth'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript, React, OAuth'
 	          )
 	        )
 	      ),
@@ -21942,12 +21984,22 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'What: A reminder app'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' A reminder app'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'How: JavaScript'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript'
 	          )
 	        )
 	      ),
@@ -21970,12 +22022,22 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'What: Check local weather using API'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' Check local weather using API'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'How: JavaScript and React'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript and React'
 	          )
 	        )
 	      ),
@@ -21998,12 +22060,60 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'What: Get those Chuck Norris jokes'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' Get those Chuck Norris jokes'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'How: JavaScript, React, React Router, SCSS'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript, React, React Router, SCSS'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { className: 'project-link',
+	          target: '_blank',
+	          href: 'https://github.com/DanGrund/1610-remember-6' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'project' },
+	          _react2.default.createElement(
+	            'h3',
+	            { className: 'project-name' },
+	            'Remember'
+	          ),
+	          _react2.default.createElement('img', {
+	            className: 'project-snapshot',
+	            src: _bluecarlouisville2.default }),
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'project-description' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' A reminder app'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            { className: 'project-description' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript, Ember, and SCSS'
 	          )
 	        )
 	      ),
@@ -22026,12 +22136,22 @@
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'What: Track those budgeting flows'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'what:'
+	            ),
+	            ' Track those budgeting flows'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'How: JavaScript, React, and SCSS'
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'project-desc-title' },
+	              'how:'
+	            ),
+	            ' JavaScript, React, and SCSS'
 	          )
 	        )
 	      )
@@ -22232,11 +22352,11 @@
 
 	exports = module.exports = __webpack_require__(200)();
 	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Raleway);", ""]);
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Megrim);", ""]);
+	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
 
 	// module
-	exports.push([module.id, "body {\n  background: #fff;\n  color: #000;\n  font-family: sans-serif;\n  font-size: 10px; }\n\n.header {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between; }\n\n.header-title {\n  margin: auto 0; }\n\n.nav-btn-wrapper {\n  flex-basis: 20%;\n  margin: 40px 0; }\n\nh1 {\n  color: #000;\n  font-family: 'Megrim', 'Railway', sans-serif;\n  font-size: 52px; }\n\n.hero-image-placeholder {\n  width: 100%;\n  max-width: 1000px;\n  height: 600px;\n  margin: 0 auto;\n  background: url(" + __webpack_require__(182) + ") no-repeat;\n  background-size: cover;\n  filter: grayscale(1); }\n\n.contact-btn-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.media-link {\n  height: 40px;\n  margin: 5px; }\n  .media-link:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\nfooter {\n  margin: 5px;\n  text-align: center; }\n\n.project-info-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around; }\n\n.project {\n  margin: 10px;\n  padding: 10px;\n  outline: 0.5px solid #808080;\n  text-align: center; }\n  .project:hover {\n    transform: scale(1.01);\n    cursor: pointer; }\n\n.project-link {\n  display: block;\n  text-decoration: none;\n  width: 400px; }\n\n.project-name {\n  color: #000;\n  font-size: 16px; }\n\n.project-snapshot {\n  width: 300px;\n  height: 200px; }\n\n.project-description {\n  color: #000;\n  font-size: 14px; }\n\n.about-me-section {\n  font-size: 16px; }\n\n.section-title {\n  margin: 20px auto;\n  font-size: 20px;\n  text-align: center; }\n\n.nav-btn {\n  margin: 10px;\n  border: 0;\n  background-color: #fff;\n  font-size: 20px;\n  font-weight: bolder; }\n  .nav-btn:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\nbody,\n.projects-section,\n.about,\n.hero-image-placeholder {\n  opacity: 1;\n  animation: fade 2s linear;\n  -webkit-animation: fadein 2s;\n  /* Safari, Chrome and Opera > 12.1 */\n  -moz-animation: fadein 2s;\n  /* Firefox < 16 */\n  -ms-animation: fadein 2s;\n  /* Internet Explorer */\n  -o-animation: fadein 2s;\n  /* Opera < 12.1 */\n  animation: fadein 2s; }\n\n@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n", ""]);
+	exports.push([module.id, "body {\n  background: #fff;\n  color: #000;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 10px; }\n\n.header {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between; }\n\n.header-title {\n  margin: auto 60px; }\n\n.nav-btn-wrapper {\n  flex-basis: 20%;\n  margin: 40px 0; }\n\nh1 {\n  color: #000;\n  font-family: 'Megrim', 'Railway', sans-serif;\n  font-size: 52px; }\n\n.hero-image-placeholder {\n  width: 100%;\n  max-width: 1000px;\n  height: 600px;\n  margin: 0 auto;\n  background: url(" + __webpack_require__(182) + ") no-repeat;\n  background-size: cover;\n  filter: grayscale(1); }\n\n.contact-btn-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.media-link {\n  height: 40px;\n  margin: 5px; }\n  .media-link:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\nfooter {\n  margin: 5px;\n  text-align: center; }\n\n.project-info-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around; }\n\n.project {\n  margin: 10px 10px 30px;\n  text-align: center; }\n\n.project-link {\n  display: block;\n  width: 400px;\n  text-decoration: none; }\n\n.project-name {\n  color: #000;\n  font-size: 16px; }\n\n.project-snapshot {\n  width: 300px;\n  height: 200px;\n  padding: 10px;\n  outline: 0.5px solid #808080;\n  box-shadow: 5px 5px 5px #808080; }\n  .project-snapshot:hover {\n    transform: scale(1.02);\n    cursor: pointer; }\n\n.project-description {\n  color: #000;\n  font-size: 14px; }\n\n.project-desc-title {\n  font-weight: bolder; }\n\n.about-me-section {\n  font-size: 16px; }\n\n.resume-link {\n  text-align: center; }\n  .resume-link:active, .resume-link:visited {\n    color: #000; }\n\n.section-title {\n  margin: 20px auto;\n  font-size: 24px;\n  text-align: center; }\n\n.nav-btn {\n  margin: 10px;\n  border: 0;\n  background-color: #fff;\n  font-size: 20px;\n  font-weight: bolder; }\n  .nav-btn:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\nbody,\n.projects-section,\n.about,\n.hero-image-placeholder {\n  opacity: 1;\n  animation: fade 2s linear;\n  -webkit-animation: fadein 2s;\n  /* Safari, Chrome and Opera > 12.1 */\n  -moz-animation: fadein 2s;\n  /* Firefox < 16 */\n  -ms-animation: fadein 2s;\n  /* Internet Explorer */\n  -o-animation: fadein 2s;\n  /* Opera < 12.1 */\n  animation: fadein 2s; }\n\n@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n", ""]);
 
 	// exports
 
