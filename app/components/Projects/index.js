@@ -13,16 +13,16 @@ const Projects = () => {
       <h2 className='section-title'>projects</h2>
       <div className='project-info-wrapper'>
 
-        <a className='project-link'
-          target='_blank'
-          href='https://github.com/ejwill04/frogger'>
-          <div className='project'>
-            <h3 className='project-name'>Frogger</h3>
-            <img
-              className='project-snapshot'
-              src={frogger} />
-            <p className='project-description'>What: The classic arcade game frogger</p>
-            <p className='project-description'>How: JavaScript, Canvas</p>
+      <a className='project-link'
+        target='_blank'
+        href='https://github.com/ejwill04/frogger'>
+        <div className='project'>
+          <h3 className='project-name'>Frogger</h3>
+          <img
+            className='project-snapshot'
+            src={frogger} />
+          <p className='project-description'><span className='project-desc-title'>what:</span> The classic arcade game frogger</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript, Canvas</p>
         </div>
       </a>
 
@@ -34,8 +34,8 @@ const Projects = () => {
           <img
             className='project-snapshot'
             src={filmfavs} />
-            <p className='project-description'>What: Favorite new and popular movies using MovieDB API</p>
-            <p className='project-description'>How: JavaScript, React, React Router, Redux, SCSS</p>
+          <p className='project-description'><span className='project-desc-title'>what:</span> Favorite new and popular movies using MovieDB API</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript, React, React Router, Redux, SCSS</p>
         </div>
       </a>
 
@@ -47,8 +47,8 @@ const Projects = () => {
           <img
             className='project-snapshot'
             src={shootthoubreeze} />
-            <p className='project-description'>What: Messaging app</p>
-            <p className='project-description'>How: JavaScript, React, OAuth</p>
+          <p className='project-description'><span className='project-desc-title'>what:</span> Messaging app</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript, React, OAuth</p>
         </div>
       </a>
 
@@ -60,8 +60,8 @@ const Projects = () => {
           <img
             className='project-snapshot'
             src={twodobox} />
-            <p className='project-description'>What: A reminder app</p>
-            <p className='project-description'>How: JavaScript</p>
+          <p className='project-description'><span className='project-desc-title'>what:</span> A reminder app</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript</p>
         </div>
       </a>
 
@@ -73,8 +73,8 @@ const Projects = () => {
           <img
             className='project-snapshot'
             src={weathrly} />
-            <p className='project-description'>What: Check local weather using API</p>
-            <p className='project-description'>How: JavaScript and React</p>
+          <p className='project-description'><span className='project-desc-title'>what:</span> Check local weather using API</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript and React</p>
         </div>
       </a>
 
@@ -86,8 +86,21 @@ const Projects = () => {
           <img
             className='project-snapshot'
             src={chucknorris} />
-            <p className='project-description'>What: Get those Chuck Norris jokes</p>
-            <p className='project-description'>How: JavaScript, React, React Router, SCSS</p>
+          <p className='project-description'><span className='project-desc-title'>what:</span> Get those Chuck Norris jokes</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript, React, React Router, SCSS</p>
+        </div>
+      </a>
+
+      <a className='project-link'
+        target='_blank'
+        href='https://github.com/DanGrund/1610-remember-6'>
+        <div className='project'>
+          <h3 className='project-name'>Remember</h3>
+          <img
+            className='project-snapshot'
+            src={bluecarlouisville} />
+          <p className='project-description'><span className='project-desc-title'>what:</span> A reminder app</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript, Ember, and SCSS</p>
         </div>
       </a>
 
@@ -99,8 +112,8 @@ const Projects = () => {
           <img
             className='project-snapshot'
             src={bluecarlouisville} />
-            <p className='project-description'>What: Track those budgeting flows</p>
-            <p className='project-description'>How: JavaScript, React, and SCSS</p>
+          <p className='project-description'><span className='project-desc-title'>what:</span> Track those budgeting flows</p>
+          <p className='project-description'><span className='project-desc-title'>how:</span> JavaScript, React, and SCSS</p>
         </div>
       </a>
 

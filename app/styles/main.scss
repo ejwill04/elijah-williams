@@ -4,7 +4,7 @@
 body {
   background: $primary2;
   color: $primary1;
-  font-family: sans-serif;
+  font-family: $body-font;
   font-size: 10px;
 }
 
@@ -67,23 +67,14 @@ footer {
 }
 
 .project {
-  margin: 10px;
-  padding: 10px;
-  outline: .5px solid $secondary1;
+  margin: 10px 10px 30px;
   text-align: center;
-  box-shadow: 5px 5px 5px $secondary1;
-  // transition: .1s ease-in-out;
-
-  &:hover {
-    transform: scale(1.01);
-    cursor: pointer;
-  }
 }
 
 .project-link {
   display: block;
-  text-decoration: none;
   width: 400px;
+  text-decoration: none;
 }
 
 .project-name {
@@ -94,11 +85,23 @@ footer {
 .project-snapshot {
   width: 300px;
   height: 200px;
+  padding: 10px;
+  outline: .5px solid $secondary1;
+  box-shadow: 5px 5px 5px $secondary1;
+
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
 }
 
 .project-description {
   color: $primary1  ;
   font-size: 14px;
+}
+
+.project-desc-title {
+  font-weight: bolder;
 }
 
 .about-me-section {
@@ -116,7 +119,7 @@ footer {
 
 .section-title {
   margin: 20px auto;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
 }
 
