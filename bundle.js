@@ -21516,21 +21516,17 @@
 
 	var _Header2 = _interopRequireDefault(_Header);
 
-	var _Hero = __webpack_require__(185);
+	var _Hero = __webpack_require__(186);
 
 	var _Hero2 = _interopRequireDefault(_Hero);
 
-	var _About = __webpack_require__(192);
+	var _About = __webpack_require__(193);
 
 	var _About2 = _interopRequireDefault(_About);
 
-	var _Projects = __webpack_require__(194);
+	var _Projects = __webpack_require__(195);
 
 	var _Projects2 = _interopRequireDefault(_Projects);
-
-	var _Contact = __webpack_require__(202);
-
-	var _Contact2 = _interopRequireDefault(_Contact);
 
 	var _Footer = __webpack_require__(203);
 
@@ -21628,8 +21624,8 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import headshot from '../../assets/images/headshot.jpg';
 
+	var classNames = __webpack_require__(185);
 
 	var Header = function (_React$Component) {
 	  _inherits(Header, _React$Component);
@@ -21637,14 +21633,38 @@
 	  function Header() {
 	    _classCallCheck(this, Header);
 
-	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+	    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+
+	    _this.state = {
+	      scrolled: false
+	    };
+	    _this.handleScroll = _this.handleScroll.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Header, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.addEventListener('scroll', this.handleScroll);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      window.removeEventListener('scroll', this.handleScroll);
+	    }
+	  }, {
+	    key: 'handleScroll',
+	    value: function handleScroll(event) {
+	      var scrollTop = event.srcElement.body.scrollTop;
+	      var status = scrollTop > 10 ? true : false;
+	      this.setState({ scrolled: status });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      var _this2 = this;
 
+	      var mobileClass = classNames({ 'scrolled': this.state.scrolled, 'scroll-wrapper': true });
 	      return _react2.default.createElement(
 	        'section',
 	        { className: 'header' },
@@ -21658,57 +21678,61 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'nav-btn-wrapper' },
+	            { className: mobileClass },
 	            _react2.default.createElement(
-	              'button',
-	              {
-	                className: 'about-btn nav-btn',
-	                onClick: function onClick() {
-	                  _this2.props.displayBody('About');
-	                }
-	              },
-	              'about'
+	              'div',
+	              { className: 'nav-btn-wrapper' },
+	              _react2.default.createElement(
+	                'button',
+	                {
+	                  className: 'about-btn nav-btn',
+	                  onClick: function onClick() {
+	                    _this2.props.displayBody('About');
+	                  }
+	                },
+	                'about'
+	              ),
+	              _react2.default.createElement(
+	                'button',
+	                {
+	                  className: 'projects-btn nav-btn',
+	                  onClick: function onClick() {
+	                    _this2.props.displayBody('Projects');
+	                  }
+	                },
+	                'projects'
+	              )
 	            ),
 	            _react2.default.createElement(
-	              'button',
-	              {
-	                className: 'projects-btn nav-btn',
-	                onClick: function onClick() {
-	                  _this2.props.displayBody('Projects');
-	                }
-	              },
-	              'projects'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'contact-btn-wrapper' },
-	            _react2.default.createElement(
-	              'a',
-	              {
-	                href: 'https://www.linkedin.com/in/elijahwilliams',
-	                target: '_blank' },
-	              _react2.default.createElement('img', {
-	                className: 'media-link',
-	                src: _linkedin2.default })
-	            ),
-	            _react2.default.createElement(
-	              'a',
-	              {
-	                href: 'https://github.com/ejwill04',
-	                target: '_blank' },
-	              _react2.default.createElement('img', {
-	                className: 'media-link',
-	                src: _github2.default })
-	            ),
-	            _react2.default.createElement(
-	              'a',
-	              {
-	                href: 'mailto:ejwill04@gmail.com',
-	                target: '_blank' },
-	              _react2.default.createElement('img', {
-	                className: 'media-link',
-	                src: _email2.default })
+	              'div',
+	              { className: 'contact-btn-wrapper' },
+	              _react2.default.createElement(
+	                'a',
+	                {
+	                  href: 'https://www.linkedin.com/in/elijahwilliams',
+	                  target: '_blank' },
+	                _react2.default.createElement('img', {
+	                  className: 'media-link',
+	                  src: _linkedin2.default })
+	              ),
+	              _react2.default.createElement(
+	                'a',
+	                {
+	                  href: 'https://github.com/ejwill04',
+	                  target: '_blank' },
+	                _react2.default.createElement('img', {
+	                  className: 'media-link',
+	                  src: _github2.default })
+	              ),
+	              _react2.default.createElement(
+	                'a',
+	                {
+	                  href: 'mailto:ejwill04@gmail.com',
+	                  target: '_blank' },
+	                _react2.default.createElement('img', {
+	                  className: 'media-link',
+	                  src: _email2.default })
+	              )
 	            )
 	          )
 	        )
@@ -21801,6 +21825,60 @@
 /* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+
+	(function () {
+		'use strict';
+
+		var hasOwn = {}.hasOwnProperty;
+
+		function classNames () {
+			var classes = [];
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg;
+
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+
+			return classes.join(' ');
+		}
+
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
+
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -21817,29 +21895,29 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _headshot = __webpack_require__(186);
+	var _headshot = __webpack_require__(187);
 
 	var _headshot2 = _interopRequireDefault(_headshot);
 
-	var _joshtree = __webpack_require__(187);
+	var _joshtree = __webpack_require__(188);
 
 	var _joshtree2 = _interopRequireDefault(_joshtree);
 
-	var _morocco = __webpack_require__(188);
-
-	var _morocco2 = _interopRequireDefault(_morocco);
-
-	var _peru = __webpack_require__(189);
-
-	var _peru2 = _interopRequireDefault(_peru);
-
-	var _salkantay = __webpack_require__(190);
+	var _salkantay = __webpack_require__(189);
 
 	var _salkantay2 = _interopRequireDefault(_salkantay);
 
-	var _venice = __webpack_require__(191);
+	var _venice = __webpack_require__(190);
 
 	var _venice2 = _interopRequireDefault(_venice);
+
+	var _falls = __webpack_require__(191);
+
+	var _falls2 = _interopRequireDefault(_falls);
+
+	var _blankets = __webpack_require__(192);
+
+	var _blankets2 = _interopRequireDefault(_blankets);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21848,8 +21926,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	// import headshot from '../../assets/images/headshot.jpg';
-
 
 	var Hero = function (_React$Component) {
 	  _inherits(Hero, _React$Component);
@@ -21859,30 +21935,24 @@
 
 	    var _this = _possibleConstructorReturn(this, (Hero.__proto__ || Object.getPrototypeOf(Hero)).call(this));
 
-	    _this.getCurrentScroll = _this.getCurrentScroll.bind(_this);
+	    _this.state = {
+	      transform: ''
+	    };
 	    return _this;
 	  }
 
 	  _createClass(Hero, [{
-	    key: 'getCurrentScroll',
-	    value: function getCurrentScroll(e) {
-	      console.log('a thing', e);
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return (
-	        // <section className='hero-image-placeholder'></section>
-	        _react2.default.createElement(
-	          'section',
-	          { className: 'collage-wrapper' },
-	          _react2.default.createElement('img', { className: 'hero-image-collage', src: _headshot2.default, width: 300, height: 300 }),
-	          _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _joshtree2.default, width: 300, height: 300 }),
-	          _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _morocco2.default, width: 300, height: 300 }),
-	          _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _peru2.default, width: 300, height: 300 }),
-	          _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _salkantay2.default, width: 300, height: 300 }),
-	          _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _venice2.default, width: 300, height: 300 })
-	        )
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'collage-wrapper' },
+	        _react2.default.createElement('img', { className: 'hero-image-collage', src: _headshot2.default, width: 300, height: 300 }),
+	        _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _joshtree2.default, width: 300, height: 300 }),
+	        _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _blankets2.default, width: 300, height: 300 }),
+	        _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _venice2.default, width: 300, height: 300 }),
+	        _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _salkantay2.default, width: 300, height: 300 }),
+	        _react2.default.createElement('img', { className: 'hero-image-collage mobile-collage', src: _falls2.default, width: 300, height: 300 })
 	      );
 	    }
 	  }]);
@@ -21893,43 +21963,43 @@
 	exports.default = Hero;
 
 /***/ },
-/* 186 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "6f541e08332894063af755c4de536178.jpg";
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "a219f5409df37013c6c1c723eba3021c.png";
 
 /***/ },
-/* 188 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "12e7e7a740a643e38e3a065734aee1fd.png";
-
-/***/ },
 /* 189 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "542e467e0f803605341d905023ac078b.png";
-
-/***/ },
-/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "c0ce3f6866ea2e8dc9dc4817c1dcf90f.png";
 
 /***/ },
-/* 191 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "363b2c5c222881cc1ee354315f03302f.png";
 
 /***/ },
+/* 191 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "cec17bf1f0d8975e82a8af8fd6d1fb70.png";
+
+/***/ },
 /* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "7b260e97e7f9ca32b6ccde7db3af9e5d.png";
+
+/***/ },
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21942,7 +22012,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _aboutMeSection = __webpack_require__(193);
+	var _aboutMeSection = __webpack_require__(194);
 
 	var _aboutMeSection2 = _interopRequireDefault(_aboutMeSection);
 
@@ -21964,7 +22034,7 @@
 	exports.default = About;
 
 /***/ },
-/* 193 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22014,7 +22084,7 @@
 	};
 
 /***/ },
-/* 194 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22026,10 +22096,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _bluecarlouisville = __webpack_require__(195);
-
-	var _bluecarlouisville2 = _interopRequireDefault(_bluecarlouisville);
 
 	var _github = __webpack_require__(181);
 
@@ -22059,6 +22125,10 @@
 
 	var _chucknorris2 = _interopRequireDefault(_chucknorris);
 
+	var _neumann = __webpack_require__(202);
+
+	var _neumann2 = _interopRequireDefault(_neumann);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Projects = function Projects() {
@@ -22078,30 +22148,30 @@
 	        { className: 'project' },
 	        _react2.default.createElement('img', {
 	          className: 'project-snapshot',
-	          src: _frogger2.default }),
+	          src: _neumann2.default }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'project-desc-wrapper' },
 	          _react2.default.createElement(
 	            'h3',
 	            { className: 'project-name' },
-	            'Frogger'
+	            'Neumann'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'The classic arcade game frogger'
+	            'Turing student job portal'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description project-tech' },
-	            'JavaScript - Canvas'
+	            'React - React Router - Redux - Node - Sass'
 	          ),
 	          _react2.default.createElement(
 	            'a',
 	            { className: 'project-link',
 	              target: '_blank',
-	              href: 'https://github.com/ejwill04/frogger' },
+	              href: 'https://github.com/ejwill04/self-directed-project' },
 	            _react2.default.createElement('img', { src: _github2.default, className: 'media-link' })
 	          )
 	        )
@@ -22210,39 +22280,6 @@
 	        { className: 'project' },
 	        _react2.default.createElement('img', {
 	          className: 'project-snapshot',
-	          src: _weathrly2.default }),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'project-desc-wrapper' },
-	          _react2.default.createElement(
-	            'h3',
-	            { className: 'project-name' },
-	            'Weathrly'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'project-description' },
-	            'Check local weather using API'
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'project-description project-tech' },
-	            'JavaScript - React'
-	          ),
-	          _react2.default.createElement(
-	            'a',
-	            { className: 'project-link',
-	              target: '_blank',
-	              href: '' },
-	            _react2.default.createElement('img', { src: _github2.default, className: 'media-link' })
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'project' },
-	        _react2.default.createElement('img', {
-	          className: 'project-snapshot',
 	          src: _chucknorris2.default }),
 	        _react2.default.createElement(
 	          'div',
@@ -22276,30 +22313,30 @@
 	        { className: 'project' },
 	        _react2.default.createElement('img', {
 	          className: 'project-snapshot',
-	          src: _bluecarlouisville2.default }),
+	          src: _weathrly2.default }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'project-desc-wrapper' },
 	          _react2.default.createElement(
 	            'h3',
 	            { className: 'project-name' },
-	            'remEMBER'
+	            'Weathrly'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'A reminder app'
+	            'Check local weather using API'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description project-tech' },
-	            'JavaScript - Ember - Sass'
+	            'JavaScript - React'
 	          ),
 	          _react2.default.createElement(
 	            'a',
 	            { className: 'project-link',
 	              target: '_blank',
-	              href: 'https://github.com/DanGrund/1610-remember-6' },
+	              href: '' },
 	            _react2.default.createElement('img', { src: _github2.default, className: 'media-link' })
 	          )
 	        )
@@ -22309,30 +22346,30 @@
 	        { className: 'project' },
 	        _react2.default.createElement('img', {
 	          className: 'project-snapshot',
-	          src: _bluecarlouisville2.default }),
+	          src: _frogger2.default }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'project-desc-wrapper' },
 	          _react2.default.createElement(
 	            'h3',
 	            { className: 'project-name' },
-	            'Smart Budget'
+	            'Frogger'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description' },
-	            'Track those budgeting flows'
+	            'The classic arcade game frogger'
 	          ),
 	          _react2.default.createElement(
 	            'p',
 	            { className: 'project-description project-tech' },
-	            'JavaScript - React - Sass'
+	            'JavaScript - Canvas'
 	          ),
 	          _react2.default.createElement(
 	            'a',
 	            { className: 'project-link',
 	              target: '_blank',
-	              href: 'https://github.com/JeffBuss/smart-budget' },
+	              href: 'https://github.com/ejwill04/frogger' },
 	            _react2.default.createElement('img', { src: _github2.default, className: 'media-link' })
 	          )
 	        )
@@ -22342,12 +22379,6 @@
 	};
 
 	exports.default = Projects;
-
-/***/ },
-/* 195 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "6cfc960b0e9e9592b1df3a76a73b8050.jpg";
 
 /***/ },
 /* 196 */
@@ -22365,7 +22396,7 @@
 /* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "77aae6b17d837188ef2869c6ae687635.png";
+	module.exports = __webpack_require__.p + "692c72c354b74371e9f77b979ca02eae.png";
 
 /***/ },
 /* 199 */
@@ -22383,80 +22414,13 @@
 /* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "d9c93258e9ab30837777124654a7dc96.png";
+	module.exports = __webpack_require__.p + "999b1553c695adca6111c3358e1419cf.png";
 
 /***/ },
 /* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _linkedin = __webpack_require__(180);
-
-	var _linkedin2 = _interopRequireDefault(_linkedin);
-
-	var _github = __webpack_require__(181);
-
-	var _github2 = _interopRequireDefault(_github);
-
-	var _email = __webpack_require__(182);
-
-	var _email2 = _interopRequireDefault(_email);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Contact = function Contact() {
-	  return _react2.default.createElement(
-	    'section',
-	    { id: 'contact' },
-	    _react2.default.createElement(
-	      'h2',
-	      { className: 'section-title' },
-	      'contact'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'contact-btn-wrapper' },
-	      _react2.default.createElement(
-	        'a',
-	        {
-	          href: 'https://www.linkedin.com/in/elijahwilliams',
-	          target: '_blank' },
-	        _react2.default.createElement('img', {
-	          className: 'media-link',
-	          src: _linkedin2.default })
-	      ),
-	      _react2.default.createElement(
-	        'a',
-	        {
-	          href: 'https://github.com/ejwill04',
-	          target: '_blank' },
-	        _react2.default.createElement('img', {
-	          className: 'media-link',
-	          src: _github2.default })
-	      ),
-	      _react2.default.createElement(
-	        'a',
-	        {
-	          href: 'mailto:ejwill04@gmail.com',
-	          target: '_blank' },
-	        _react2.default.createElement('img', {
-	          className: 'media-link',
-	          src: _email2.default })
-	      )
-	    )
-	  );
-	};
-
-	exports.default = Contact;
+	module.exports = __webpack_require__.p + "b93ab3d9e4f381ee231cc591ecf346c3.png";
 
 /***/ },
 /* 203 */
@@ -22520,7 +22484,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
 
 	// module
-	exports.push([module.id, ".header {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  background-color: #fdfdfd;\n  z-index: 1; }\n\n.header-content {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  text-align: center; }\n\nh1 {\n  color: #000;\n  font-family: 'Megrim', 'Railway', sans-serif;\n  font-size: 52px; }\n\n.header-title {\n  margin: auto 60px; }\n  @media (max-width: 600px) {\n    .header-title {\n      margin: 10px;\n      font-size: 36px; } }\n  @media (max-width: 374px) {\n    .header-title {\n      margin: 5px;\n      font-size: 28px; } }\n\n.nav-btn-wrapper {\n  margin-bottom: 10px; }\n  @media (max-width: 600px) {\n    .nav-btn-wrapper {\n      margin: 5px; } }\n\n.nav-btn {\n  margin: 10px;\n  border: 0;\n  background-color: #fdfdfd;\n  font-size: 20px;\n  font-weight: bolder; }\n  .nav-btn:focus {\n    outline: 0; }\n  .nav-btn:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\n.contact-btn-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.media-link {\n  height: 40px;\n  margin: 5px; }\n  .media-link:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\n.collage-wrapper {\n  padding-top: 200px;\n  text-align: center; }\n  @media (max-width: 700px) {\n    .collage-wrapper {\n      height: 320px; } }\n\n.hero-image-collage {\n  margin: 20px; }\n  @media (max-width: 374px) {\n    .hero-image-collage {\n      margin: 5px; } }\n\n@media (max-width: 700px) {\n  .mobile-collage {\n    width: 0;\n    height: 0;\n    margin: 0;\n    visibility: hidden; } }\n\n.projects-section {\n  padding-top: 180px; }\n  @media (max-width: 400px) {\n    .projects-section {\n      padding-top: 150px; } }\n\n.project-info-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around; }\n\n.project {\n  display: flex;\n  width: 685px;\n  margin: 10px 10px 30px;\n  padding: 10px;\n  outline: 0.2px solid #e4e4e4;\n  text-align: center;\n  box-shadow: 1px 1px 4px; }\n  @media (max-width: 400px) {\n    .project {\n      flex-direction: column; } }\n\n.project-link {\n  text-decoration: none; }\n\n.project-name {\n  color: #000;\n  font-size: 20px; }\n  @media (max-width: 400px) {\n    .project-name {\n      margin: 10px; } }\n\n.project-snapshot {\n  width: 300px;\n  height: 200px;\n  margin-right: 10px;\n  padding: 10px; }\n  @media (max-width: 400px) {\n    .project-snapshot {\n      margin-right: 0;\n      margin-bottom: 10px; } }\n\n.media-link {\n  height: 40px;\n  margin: 5px; }\n  .media-link:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\n.project-description {\n  color: #000;\n  font-size: 14px; }\n\n.project-tech {\n  font-weight: 800; }\n\n.project-desc-wrapper {\n  padding: 20px;\n  border-left: 0.2px solid #e4e4e4;\n  text-align: left; }\n  @media (max-width: 400px) {\n    .project-desc-wrapper {\n      padding-top: 0;\n      border-top: 0.2px solid #e4e4e4;\n      border-left: 0; } }\n\n.about-me-section {\n  margin: 10px 100px;\n  font-size: 16px;\n  text-align: center; }\n  @media (max-width: 600px) {\n    .about-me-section {\n      margin: 10px; } }\n\n.resume-link {\n  text-align: center; }\n  .resume-link:active, .resume-link:visited {\n    color: #000; }\n\nbody {\n  padding: 0;\n  background: #fdfdfd;\n  color: #000;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 10px; }\n\nfooter {\n  margin: 5px;\n  text-align: center; }\n\n.section-title {\n  margin: 20px auto;\n  font-size: 24px;\n  text-align: center;\n  z-index: 0; }\n\nbody,\n.projects-section,\n.about,\n.hero-image-placeholder {\n  opacity: 1;\n  animation: fade 2s linear;\n  -webkit-animation: fadein 2s;\n  /* Safari, Chrome and Opera > 12.1 */\n  -moz-animation: fadein 2s;\n  /* Firefox < 16 */\n  -ms-animation: fadein 2s;\n  /* Internet Explorer */\n  -o-animation: fadein 2s;\n  /* Opera < 12.1 */\n  animation: fadein 2s; }\n\n@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n", ""]);
+	exports.push([module.id, ".header {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  background-color: #fdfdfd;\n  z-index: 1; }\n\n.header-content {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  text-align: center; }\n\nh1 {\n  color: #000;\n  font-family: 'Megrim', 'Railway', sans-serif;\n  font-size: 52px; }\n\n.header-title {\n  margin: auto 60px; }\n  @media (max-width: 600px) {\n    .header-title {\n      margin: 10px;\n      font-size: 36px; } }\n  @media (max-width: 374px) {\n    .header-title {\n      margin: 5px;\n      font-size: 28px; } }\n\n.nav-btn-wrapper {\n  margin-bottom: 10px; }\n  @media (max-width: 600px) {\n    .nav-btn-wrapper {\n      margin: 5px; } }\n\n.nav-btn {\n  margin: 10px;\n  border: 0;\n  background-color: #fdfdfd;\n  font-size: 20px;\n  font-weight: bolder; }\n  .nav-btn:focus {\n    outline: 0; }\n  .nav-btn:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\n.contact-btn-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.media-link {\n  height: 40px;\n  margin: 5px; }\n  .media-link:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\n.scroll-wrapper {\n  height: auto;\n  transition: 0.01s cubic-bezier(0, 1, 0.5, 1); }\n\n@media (max-width: 600px) {\n  .scrolled {\n    height: 1px;\n    visibility: collapse; } }\n\n.collage-wrapper {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding-top: 200px;\n  text-align: center; }\n  @media (max-width: 700px) {\n    .collage-wrapper {\n      height: 320px; } }\n\n.hero-image-collage {\n  margin: 20px; }\n  @media (max-width: 374px) {\n    .hero-image-collage {\n      margin: 5px; } }\n\n@media (max-width: 700px) {\n  .mobile-collage {\n    width: 0;\n    height: 0;\n    margin: 0;\n    visibility: hidden; } }\n\n.projects-section {\n  padding-top: 180px; }\n  @media (max-width: 400px) {\n    .projects-section {\n      padding-top: 150px; } }\n\n.project-info-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around; }\n\n.project {\n  display: flex;\n  width: 685px;\n  margin: 10px 10px 30px;\n  padding: 10px;\n  outline: 0.2px solid #e4e4e4;\n  text-align: center;\n  box-shadow: 1px 1px 4px; }\n  @media (max-width: 400px) {\n    .project {\n      flex-direction: column; } }\n\n.project-link {\n  text-decoration: none; }\n\n.project-name {\n  color: #000;\n  font-size: 20px; }\n  @media (max-width: 400px) {\n    .project-name {\n      margin: 10px; } }\n\n.project-snapshot {\n  width: 300px;\n  height: 200px;\n  margin-right: 10px;\n  padding: 10px; }\n  @media (max-width: 400px) {\n    .project-snapshot {\n      margin-right: 0;\n      margin-bottom: 10px; } }\n\n.media-link {\n  height: 40px;\n  margin: 5px; }\n  .media-link:hover {\n    transform: scale(1.05);\n    cursor: pointer; }\n\n.project-description {\n  color: #000;\n  font-size: 14px; }\n\n.project-tech {\n  font-weight: 800; }\n\n.project-desc-wrapper {\n  padding: 20px;\n  border-left: 0.2px solid #e4e4e4;\n  text-align: left; }\n  @media (max-width: 400px) {\n    .project-desc-wrapper {\n      padding-top: 0;\n      border-top: 0.2px solid #e4e4e4;\n      border-left: 0; } }\n\n.about-me-section {\n  margin: 10px 100px;\n  font-size: 16px;\n  text-align: center; }\n  @media (max-width: 600px) {\n    .about-me-section {\n      margin: 10px; } }\n\n.resume-link {\n  text-align: center; }\n  .resume-link:active, .resume-link:visited {\n    color: #000; }\n\nbody {\n  padding: 0;\n  background: #fdfdfd;\n  color: #000;\n  font-family: \"Roboto\", sans-serif;\n  font-size: 10px; }\n\nfooter {\n  margin: 5px;\n  text-align: center; }\n\n.section-title {\n  margin: 20px auto;\n  font-size: 24px;\n  text-align: center;\n  z-index: 0; }\n\nbody,\n.projects-section,\n.about,\n.hero-image-placeholder {\n  opacity: 1;\n  animation: fade 2s linear;\n  -webkit-animation: fadein 2s;\n  /* Safari, Chrome and Opera > 12.1 */\n  -moz-animation: fadein 2s;\n  /* Firefox < 16 */\n  -ms-animation: fadein 2s;\n  /* Internet Explorer */\n  -o-animation: fadein 2s;\n  /* Opera < 12.1 */\n  animation: fadein 2s; }\n\n@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n", ""]);
 
 	// exports
 
